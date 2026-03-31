@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>花蓮旅遊介紹</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url('https://image.gdg.asia/a/25/070/2507011221929062130226.png');
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+/* 導覽列 */
+nav {
+    background: rgba(0,0,0,0.7);
+    padding: 12px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+nav button {
+    background: none;
+    border: none;
+    color: white;
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+nav button:hover {
+    color: #ffd700;
+}
+
+/* 分頁 */
+.tab-content {
+    display: none;
+    padding: 40px 20px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* 卡片 */
+.card {
+    background: rgba(255,255,255,0.9);
+    color: black;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 650px;
+}
+
+/* 圖片 */
+img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* 標題 */
+h1, h2 {
+    text-align: center;
+}
+
+/* 回到頂部（大） */
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: #ff5722;
+    color: white;
+    border: none;
+    padding: 20px 24px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+</style>
+</head>
+
+<body>
+
+<h1>花蓮旅遊介紹</h1>
+
+<!-- 導覽列 -->
+<nav>
+    <button onclick="showTab('spots')">景點</button>
+    <button onclick="showTab('food')">美食</button>
+    <button onclick="showTab('info')">交通＆關於</button>
+</nav>
+
+<!-- 景點 -->
+<section id="spots" class="tab-content active">
+    <h2>熱門景點</h2>
+
+    <div class="card">
+        <h3>太魯閣國家公園</h3>
+        <p>壯觀的大理石峽谷，是花蓮最具代表性的自然景觀。</p>
+        <img src="https://photo.settour.com.tw/900x600/https%3A%2F%2Fwww.settour.com.tw%2Fss_img%2FGRT%2F0000%2F0030%2F36%2Fori_32293401.jpg">
+    </div>
+
+    <div class="card">
+        <h3>七星潭</h3>
+        <p>海景遼闊，是欣賞日出與放鬆的好去處。</p>
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/2a/e0/cd/caption.jpg?w=900&h=500&s=1">
+    </div>
+
+    <div class="card">
+        <h3>清水斷崖</h3>
+        <p>壯麗的海岸峭壁，是台灣著名景點之一。</p>
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwergDR3AiGS9kaQTrgD41Ya909q6UDJd2_gevclWO3JjB-maLmD6auRgmM3ulwfu9B3pgZLj9dORuVSqatFqiCcNnFAD0ueWocVMfeEreF9LcKDETp1g4WXor22O0chRjl4LYHtsuw=s1360-w1360-h1020-rw">
+    </div>
+</section>
+
+<!-- 美食 -->
+<section id="food" class="tab-content">
+    <h2>花蓮美食</h2>
+
+    <div class="card">
+        <h3>炸彈蔥油餅</h3>
+        <p>外酥內軟，加蛋更香，是人氣小吃。</p>
+        <img src="https://img.bigfang.tw/2020/09/1600765844-ae3151ead6e3f96ea05dc6dc1af36f4f.jpg">
+    </div>
+
+    <div class="card">
+        <h3>麻糬</h3>
+        <p>Q彈口感，是花蓮經典伴手禮。</p>
+        <img src="https://static.iyp.tw/5529/files/55840799-9160-4237-b1cd-6825601984dd.jpg">
+    </div>
+
+    <div class="card">
+        <h3>扁食</h3>
+        <p>湯頭清甜，是在地經典料理。</p>
+        <img src="https://pimg.1px.tw/sinea100/1439656481-3134474996.jpg">
+    </div>
+</section>
+
+<!-- 交通＋關於（無圖片） -->
+<section id="info" class="tab-content">
+    <h2>交通與關於花蓮</h2>
+
+    <div class="card">
+        <h3>關於花蓮</h3>
+        <p>
+            花蓮位於台灣東部，以壯麗自然景觀與清新空氣聞名，
+            擁有太平洋海岸與世界級峽谷，是許多人放鬆旅遊的首選地點。
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>交通方式</h3>
+        <p>
+            前往花蓮可以搭乘火車、客運或自行開車。
+            抵達後建議租機車或汽車，方便探索各大景點與美食。
+        </p>
+    </div>
+</section>
+
+<!-- 回到頂部 -->
+<button id="topBtn">↑</button>
+
+<script>
+// 分頁切換
+function showTab(tabId){
+    let tabs = document.querySelectorAll(".tab-content");
+    tabs.forEach(tab => tab.classList.remove("active"));
+
+    document.getElementById(tabId).classList.add("active");
+
+    window.scrollTo({top: 0, behavior: "smooth"});
+}
+
+// 回到頂部
+let btn = document.getElementById("topBtn");
+
+window.onscroll = function() {
+    if (document.documentElement.scrollTop > 0) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
+    }
+};
+
+btn.onclick = function() {
+    window.scrollTo({top: 0, behavior: "smooth"});
+};
+</script>
+
+</body>
+</html>
+    
+  </body>
+  
+</html>
